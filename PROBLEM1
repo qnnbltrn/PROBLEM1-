@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <conio.h>
+
+using namespace std;
+
+int main ()
+{
+    string pckg;
+    int t;
+    double p;
+    
+    cout << "Enter the package letter:";
+    cin >> pckg;
+    
+    cout << "Enter the number of hours:";
+    cin >> t;
+        
+        if (pckg == "A")
+        {
+            if (t > 10)
+                p = 995 + (t - 10) * 2;
+            else 
+                p = 995;
+        } 
+        
+        else if (pckg == "B")
+        {
+            if (t > 20)
+                p = 1495 + (t - 20) * 1;
+            else 
+                p = 1495;
+
+        }
+        
+        else 
+        {
+            p = 1995;
+        }
+            
+
+    cout << "The Price is: P" << fixed << setprecision(2) << p;
+
+_getch ();
+return 0;
+}
